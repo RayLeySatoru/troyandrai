@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400&display=swap" rel="stylesheet">
+    <title>Full Screen Error</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            background-color: #176B87;
+        }
+
+        .searchbar {
+            display: flex;
+        }
+
+        .searchbar .search {
+            height: 6vh;
+            width: 15vw;
+            background-color: #EEEEEE;
+        }
+
+        .searchbar .button {
+            width: 7vw;
+            font-size: 1vw;
+            font-family: 'Josefin Sans', sans-serif;
+            color: #EEEEEE;
+            background-color: #176B87;
+        }
+
+        nav,
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1vw 0 2vw;
+            gap: 2vw;
+            height: 15vh;
+        }
+
+        nav {
+            background-color: #053B50;
+        }
+
+        p,
+        li {
+            color: #EEEEEE;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 2vw;
+        }
+
+        li,
+        p:hover li,
+        p,
+        .button {
+            cursor: pointer;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            margin-top: 10vh;
+            height: 60vh;
+            width: 60vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <p>Home</p>
+            <div class="searchbar">
+                <input id="search" class="search" type="text">
+                <input onclick="changeMe()" class="button" type="button" value="SEARCH">
+            </div>
+            <ul style="list-style: none;">
+                <li class="full" onclick="toggleFullScreen()">Fullscreen</li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-container">
+        <main>
+            <img id="sea" class="pic" src="" alt="">
+        </main>
+    </div>
+
+    <script>
+
+        const changeMe = () => {
+            let pic = document.getElementById("sea");
+            let search = document.getElementById("search").value;
+            console.log(search)
+            if (search == "turtle") {
+                pic.src = "https://images.unsplash.com/photo-1496196614460-48988a57fccf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2VhJTIwY3JlYXR1cmVzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60";
+            }
+            else if (search == "jellyfish") {
+                pic.src = "https://images.unsplash.com/photo-1543007168-5fa9b3c5f5fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c2VhJTIwY3JlYXR1cmVzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60";
+            }
+            else if (search == "seahorse") {
+                pic.src = "https://images.unsplash.com/photo-1607646710406-83d1fcfbbf94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2VhJTIwY3JlYXR1cmVzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60";
+            }
+            else if (search == "fish") {
+                pic.src = "https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNlYSUyMGNyZWF0dXJlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60";
+            }
+            else if (search == "starfish") {
+                pic.src = "https://images.unsplash.com/photo-1523857159215-11e46223d00b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNlYSUyMGNyZWF0dXJlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60";
+            }
+            else if (search == "whale") {
+                pic.src = "https://images.unsplash.com/photo-1454991727061-be514eae86f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHNlYSUyMGNyZWF0dXJlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60";
+            }
+            else if (search == "shark") {
+                pic.src = "https://images.unsplash.com/photo-1593544737805-4ec50543564b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2hhcmtzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60";
+            }
+            else if (search == "dolphin") {
+                pic.src = "https://images.unsplash.com/photo-1570481662006-a3a1374699e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZG9scGhpbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60";
+            }
+            else if (search == "sealion") {
+                pic.src = "https://images.unsplash.com/photo-1585194329142-2d0fcb38813e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNlYSUyMGFuaW1hbHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60";
+            }
+            else if (search == "clownfish") {
+                pic.src = "https://media.istockphoto.com/id/1427245653/photo/clown-fish-with-colorful-anemone.webp?b=1&s=170667a&w=0&k=20&c=5wpJ9xDgFZOnEPjlI84_BJBThoSIPrCjBpbAkM7Mf3o=";
+            }
+        }
+
+
+        function toggleFullScreen() {
+            if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen();
+            } else if (document.documentElement.mozRequestFullScreen) {
+                document.documentElement.mozRequestFullScreen();
+            } else if (document.documentElement.webkitRequestFullscreen) {
+                document.documentElement.webkitRequestFullscreen();
+            } else if (document.documentElement.msRequestFullscreen) {
+                document.documentElement.msRequestFullscreen();
+            }
+        }
+    </script>
+</body>
+
+</html>
